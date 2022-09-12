@@ -1,0 +1,16 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["William Overton <will@fastly.com>"]
+description = "An example of fetching data from an origin"
+language = "javascript"
+manifest_version = 2
+name = "FetchingData"
+service_id = "4yxR8Rxfvkfg4ipvbBFhvZ"
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.main_origin]
+      url = "https://some-random-api.ml"

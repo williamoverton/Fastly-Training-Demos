@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["William Overton <will@fastly.com>"]
+description = "An example of routing using expressly"
+language = "javascript"
+manifest_version = 2
+name = "Routing"
+service_id = ""

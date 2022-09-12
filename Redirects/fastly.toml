@@ -1,0 +1,19 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["William Overton <will@fastly.com>"]
+description = "An example of using the Config Store for redirects"
+language = "javascript"
+manifest_version = 2
+name = "Redirects"
+service_id = "5fe0ZI0imcNwKGFF1ZEM0Z"
+
+[local_server]
+
+  [local_server.backends]
+
+  [local_server.dictionaries]
+
+    [local_server.dictionaries.redirects]
+      file = "redirects.json"
+      format = "json"

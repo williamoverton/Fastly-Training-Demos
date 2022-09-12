@@ -1,0 +1,7 @@
+{
+  "/": "/home",
+  "/profile": "/account",
+  "/about": "/about-us",
+  "/contact": "/contact-us",
+  "/blog": "https://blog.example.com"
+}

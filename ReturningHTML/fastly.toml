@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["William Overton <will@fastly.com>"]
+description = "An example or returning HTML with correct headers"
+language = "javascript"
+manifest_version = 2
+name = "ReturningHTML"
+service_id = ""

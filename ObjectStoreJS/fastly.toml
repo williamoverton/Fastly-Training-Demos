@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["William Overton <will@fastly.com>"]
+description = "An example of using the object store in JS"
+language = "javascript"
+manifest_version = 2
+name = "ObjectStoreJS"
+service_id = "4tHj4SdSYcaqsadZXnh1Em"
