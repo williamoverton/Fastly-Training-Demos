@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WS Subscribe</title>
+</head>
+<body>
+<h1>Messages from C@E WS server</h1>
+    <!-- div with messages -->
+    <div id="messages"></div>
+
+<script>
+
+    let socket = new WebSocket("wss://fanout-play.edgecompute.app/ws?channel={{ channel }}");
+    let counter = 1;
+
+    // message received - show the message in div#messages
+    socket.onmessage = function(event) {
+        let message = event.data;
+        // The {} pattern is a keep alive so just ignore it.
+        if (message != "{}") {
+            let messageElem = document.createElement('div');
+            messageElem.textContent = message;
+            document.getElementById('messages').append(messageElem);
+        } else {
+            console.log("{" + counter++ + "}")
+        }
+
+    }
+</script>
+</body>
+</html>
