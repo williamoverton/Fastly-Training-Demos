@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["Jim Rainville"]
+description = "Reimplementing the video cache warmer in go"
+language = "go"
+manifest_version = 2
+name = "video-cache-warmer-go"
+service_id = "22MPqRBjZnVX0eD3NAq0uU"
