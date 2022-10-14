@@ -1,0 +1,6 @@
+github.com/fastly/compute-sdk-go v0.1.1 h1:Kz4ggWOVMyoTdkTTbTgPgZ3RB2DKANIb+EWXRNs/eh0=
+github.com/fastly/compute-sdk-go v0.1.1/go.mod h1:Nsi7SyXNUrLdN0apygSKiFeUzJSpTrIu9iDemKA0Z3s=
+github.com/grafov/m3u8 v0.11.1 h1:igZ7EBIB2IAsPPazKwRKdbhxcoBKO3lO1UY57PZDeNA=
+github.com/grafov/m3u8 v0.11.1/go.mod h1:nqzOkfBiZJENr52zTVd/Dcl03yzphIMbJqkXGu+u080=
+github.com/quangngotan95/go-m3u8 v0.1.0 h1:8oseBjJn5IKHQKdRZwSNskkua3NLrRtlvXXtoVgBzMk=
+github.com/quangngotan95/go-m3u8 v0.1.0/go.mod h1:smzfWHlYpBATVNu1GapKLYiCtEo5JxridIgvvudZ+Wc=

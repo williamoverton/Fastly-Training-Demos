@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["Jim Rainville"]
+description = "Playing with fanout"
+language = "rust"
+manifest_version = 2
+name = "fanout-play"
+service_id = "4QG7PFi7i2QjlZanNGM3ij"

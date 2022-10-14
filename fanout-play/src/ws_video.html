@@ -1,0 +1,51 @@
+<head>
+  <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+
+<body>
+  <video
+  	id='my-video'
+  	class='video-js'
+  	controls preload='none'
+  	width='1280'
+  	height='720'
+  	poster="{{ primary_poster }}"
+  	muted='muted'
+  	data-setup='{}'>
+    <source src="{{ primary_video }}" type='application/x-mpegURL'>
+
+  </video>
+
+  <script src='https://vjs.zencdn.net/7.6.0/video.js'></script>
+<script>
+    let socket = new WebSocket("wss://fanout-play.edgecompute.app/ws?channel={{ channel }}");
+	// message received -
+    socket.onmessage = function(event) {
+        let message = event.data;
+		// console.log("Message: " + message);
+        // The {} pattern is a keep alive so just ignore it.
+		switch(message) {
+			case "play":
+				console.log("Hitting play button");
+    			var player = videojs('my-video');
+				player.play();
+    			break;
+  			case "change":
+    			console.log("Change Source");
+				var player = videojs('my-video');
+				player.poster("{{ secondary_poster }}");
+				player.src({ type: 'application/x-mpegURL', src: "{{ secondary_video }}" });
+				player.play();
+    			break;
+			case "{}":
+				console.log("Keep alive");
+				break;
+  			default:
+				  console.log("Unrecognized command: " + message);
+		}
+    }
+</script>
+</body>
