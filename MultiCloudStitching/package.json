@@ -1,8 +1,11 @@
 {
     "author": "oss@fastly.com",
     "dependencies": {
+        "@fastly/expressly": "^1.0.0-alpha.9",
         "@fastly/js-compute": "^0.4",
-        "mustache": "^4.2.0"
+        "jws": "^4.0.0",
+        "mustache": "^4.2.0",
+        "node-polyfill-webpack-plugin": "^2.0.1"
     },
     "devDependencies": {
         "core-js": "^3.19.1",

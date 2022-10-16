@@ -1,0 +1,12 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["will@fastly.com"]
+description = "Slow connections on purpose"
+language = "rust"
+manifest_version = 2
+name = "TarPit"
+service_id = ""
+
+[scripts]
+  build = "cargo build --bin TarPit --release --target wasm32-wasi --color always"

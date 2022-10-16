@@ -6,7 +6,7 @@ description = "An example of creating a page generated from multiple sources"
 language = "javascript"
 manifest_version = 2
 name = "MultiCloudStitching"
-service_id = ""
+service_id = "6cXTKA6FK3ExSGFBGgY9ou"
 
 [local_server]
 
@@ -15,3 +15,8 @@ service_id = ""
     [local_server.backends.aws_origin]
       url = "https://dzlhynv1v2wzy.cloudfront.net"
 
+    [local_server.backends.product_origin]
+      url = "http://35.189.102.211"
+
+[scripts]
+  build = "$(npm bin)/webpack && $(npm bin)/js-compute-runtime ./bin/index.js ./bin/main.wasm"

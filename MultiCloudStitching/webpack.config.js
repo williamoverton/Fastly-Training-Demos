@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
   entry: "./src/index.js",
@@ -25,8 +26,8 @@ module.exports = {
     ],
   },
   plugins: [
-    // Polyfills go here.
-    // Used for, e.g., any cross-platform WHATWG, 
-    // or core nodejs modules needed for your application.
+    new NodePolyfillPlugin({
+      includeAliases: ["util", "stream", "crypto", "process"]
+    })
   ],
 };
