@@ -7,6 +7,7 @@ module.exports = {
   optimization: {
     minimize: false
   },
+  mode: "production",
   target: "webworker",
   output: {
     filename: "index.js",

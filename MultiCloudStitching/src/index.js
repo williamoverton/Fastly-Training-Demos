@@ -41,7 +41,6 @@ router.use("/news", async (req, res) => {
   // If the token is valid, set the session on the request
   try {
     req.session = JSON.parse((await jws.decode(jwt, "HS256", getJwtSecret())).payload);
-    console.log(req.session);
   } catch (e) {
     console.log("Got invalid jwt!");
     res.redirect("/login");
@@ -64,14 +63,16 @@ router.get("/login", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   /**
-   * Read post body for username
+   * Read post body for login credentials
    */
-  let session = null;
-
   const formData = await req.text();
+
+  console.log(`Got form data: ${formData}`);
+
+  // Parse the form data with URLSearchParams
   const tmpUrl = new URL(`http://localhost?${formData}`);
   const email = tmpUrl.searchParams.get("email");
-  const password = tmpUrl.searchParams.get("password");
+  const _password = tmpUrl.searchParams.get("password"); // For this demo, we're not checking the password
 
   // If the username is not set correctly, return an error
   if(typeof email !== "string") {
@@ -94,12 +95,5 @@ router.post("/login", async (req, res) => {
   // Redirect to home page now we are logged in
   return res.redirect("/");
 });
-
-router.post("/test", async (req, res) => {
-  const text = await req.text();
-  console.log(text);
-  res.send(text);
-});
-
 
 router.listen();
