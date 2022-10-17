@@ -46,7 +46,7 @@ const formHTML = `
 </div>
 `
 
-export const createLoginPage = async () => {
+export const createLoginPage = async (req) => {
 
   let startTime = new Date();
 
@@ -56,7 +56,7 @@ export const createLoginPage = async () => {
 
   let html = Mustache.render(template, {
     title: "Fastly Compute@Edge",
-    header: generateHeader("login"),
+    header: generateHeader(req, "login"),
     content: formHTML,
     footer: generateFooter(startTime),
   });

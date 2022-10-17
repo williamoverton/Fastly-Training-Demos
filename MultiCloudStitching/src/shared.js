@@ -11,7 +11,10 @@ export const getHTMLTemplate = async () => {
   return template;
 };
 
-export const generateHeader = (page) => {
+export const generateHeader = (req, page) => {
+
+  const isLoggedIn = "session" in req;
+
   return `
     <div class="container">
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -22,6 +25,7 @@ export const generateHeader = (page) => {
         <ul class="nav nav-pills">
           <li class="nav-item"><a href="/" class="nav-link ${page == "home" ? "active" : ""}" aria-current="page">Home</a></li>
           <li class="nav-item"><a href="/news" class="nav-link ${page == "news" ? "active" : ""}">News Feed</a></li>
+          ${!isLoggedIn ? `<li class="nav-item"><a href="/login" class="nav-link ${page == "login" ? "active" : ""}">Login</a></li>` : `<li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>`}
           <li class="nav-item"><button class="btn nav-link cache-clear">Clear Cache</button></li>
         </ul>
       </header>

@@ -1,7 +1,7 @@
 import Mustache from "mustache";
 import { getHTMLTemplate, generateFooter, generateHeader } from "./shared";
 
-export const createHomePage = async () => {
+export const createHomePage = async (req) => {
 
   let startTime = new Date();
 
@@ -12,7 +12,7 @@ export const createHomePage = async () => {
 
   let html = Mustache.render(template, {
     title: "Fastly Compute@Edge",
-    header: generateHeader("home"),
+    header: generateHeader(req, "home"),
     content: formatProducts(products),
     footer: generateFooter(startTime),
   });
@@ -39,7 +39,7 @@ const getProducts = async (productIds) => {
 }
 
 const formatProducts = (products) => {
-  let html = `<h2>Products</h2><div class="row mb-2">`;
+  let html = `<h2>Content</h2><div class="row mb-2">`;
 
   products.forEach((product) => {
     html += `

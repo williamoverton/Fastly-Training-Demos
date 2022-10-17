@@ -2,7 +2,7 @@
     "author": "oss@fastly.com",
     "dependencies": {
         "@fastly/expressly": "^1.0.0-beta.1",
-        "@fastly/js-compute": "^0.4",
+        "@fastly/js-compute": "^0.5.4",
         "jws": "^4.0.0",
         "mustache": "^4.2.0",
         "node-polyfill-webpack-plugin": "^2.0.1"

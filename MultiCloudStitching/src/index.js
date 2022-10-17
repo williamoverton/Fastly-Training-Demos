@@ -12,28 +12,21 @@ const getJwtSecret = () => {
 
 const router = new Router();
 
-router.get("/", async (req, res) => {
-  const startTime = new Date().getTime();
-
-  res.send(await createHomePage());
-  res.headers.set("x-response-time", new Date().getTime() - startTime);
-  res.headers.set("content-type", "text/html");
-});
-
-router.use("/news", async (req, res) => {
-
+router.use(async (req, res) => {
   // Check cookies for a user session
   const jwt = req.cookies.get("jwt");
 
-  // If no session, redirect to login
+  // If no session, do nothing
   if (!jwt) {
-    return res.redirect("/login");
+    return;
   }
 
+  // If cookie is invalid, force the user to login again
   let isValid = await jws.verify(jwt, "HS256", getJwtSecret());
   
   if(!isValid){
     console.log("Got invalid jwt!");
+    res.clearCookie("jwt");
     res.redirect("/login");
     return;
   }
@@ -41,6 +34,7 @@ router.use("/news", async (req, res) => {
   // If the token is valid, set the session on the request
   try {
     req.session = JSON.parse((await jws.decode(jwt, "HS256", getJwtSecret())).payload);
+    console.log("User is logged in!")
   } catch (e) {
     console.log("Got invalid jwt!");
     res.redirect("/login");
@@ -48,17 +42,25 @@ router.use("/news", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  const startTime = new Date().getTime();
+
+  res.send(await createHomePage(req));
+  res.headers.set("x-response-time", new Date().getTime() - startTime);
+  res.headers.set("content-type", "text/html");
+});
+
 router.get("/news", async (req, res) => {
   const startTime = new Date().getTime();
 
-  res.send(await createNewsPage());
+  res.send(await createNewsPage(req));
   res.headers.set("x-response-time", new Date().getTime() - startTime);
   res.headers.set("content-type", "text/html");
 });
 
 router.get("/login", async (req, res) => {
   res.headers.set("content-type", "text/html");
-  res.send(await createLoginPage());
+  res.send(await createLoginPage(req));
 });
 
 router.post("/login", async (req, res) => {
@@ -93,6 +95,11 @@ router.post("/login", async (req, res) => {
   res.cookie("jwt", token);
 
   // Redirect to home page now we are logged in
+  return res.redirect("/");
+});
+
+router.get("/logout", async (req, res) => {
+  res.clearCookie("jwt");
   return res.redirect("/");
 });
 

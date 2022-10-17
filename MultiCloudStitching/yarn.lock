@@ -17,11 +17,6 @@
     "core-js" "^3.25.5"
     "path-to-regexp" "^6.2.1"
 
-"@fastly/js-compute@^0.4":
-  "integrity" "sha512-3tPiJwB19KKwtd9x5xj6cIg3v246gUol9Op6IVPDreRazOM0ceMKG9jXP57Q/3ky2BlyZ1v+3YyGH9wJYlBlng=="
-  "resolved" "https://registry.npmjs.org/@fastly/js-compute/-/js-compute-0.4.0.tgz"
-  "version" "0.4.0"
-
 "@fastly/js-compute@^0.5.4":
   "integrity" "sha512-ZyrgbNLIu4tFnx8b/0fx5K0zsMdKvrT3ZVYHt4Bkxge91BfSGcOyRioonCtorJpiNHkQ0HZbGf/A+xp1Snt8Xg=="
   "resolved" "https://registry.npmjs.org/@fastly/js-compute/-/js-compute-0.5.4.tgz"
@@ -837,6 +832,11 @@
   "integrity" "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
+
+"fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -1862,9 +1862,9 @@
     "terser" "^5.7.2"
 
 "terser@^5.7.2":
-  "integrity" "sha512-+ahUAE+iheqBTDxXhTisdA8hgvbEG1hHOQ9xmNjeUJSoi6DU/gMrKNcfZjHkyY6Alnuyc+ikYJaxxfHkT3+WuQ=="
-  "resolved" "https://registry.npmjs.org/terser/-/terser-5.14.1.tgz"
-  "version" "5.14.1"
+  "integrity" "sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw=="
+  "resolved" "https://registry.npmjs.org/terser/-/terser-5.15.1.tgz"
+  "version" "5.15.1"
   dependencies:
     "@jridgewell/source-map" "^0.3.2"
     "acorn" "^8.5.0"

@@ -11,14 +11,16 @@
         "title": "10 Things You Didn't Know About Kittens",
         "author": "John Doe",
         "date": "2022-04-10",
-        "description": "Kittens are cute, but did you know they can also be dangerous?"
+        "description": "Kittens are cute, but did you know they can also be dangerous?",
+        "paid": true
     },
     {
         "id": 3,
         "title": "10 Things You Didn't Know About Hamsters",
         "author": "John Doe",
         "date": "2022-04-12",
-        "description": "Hamsters are cute, but did you know they can also be dangerous?"
+        "description": "Hamsters are cute, but did you know they can also be dangerous?",
+        "paid": true
     },
     {
         "id": 4,
@@ -32,7 +34,8 @@
         "title": "10 Things You Didn't Know About Snakes",
         "author": "John Doe",
         "date": "2022-04-16",
-        "description": "Snakes are cute, but did you know they can also be dangerous?"
+        "description": "Snakes are cute, but did you know they can also be dangerous?",
+        "paid": true
     },
     {
         "id": 6,
@@ -46,14 +49,16 @@
         "title": "10 Things You Didn't Know About Lizards",
         "author": "John Doe",
         "date": "2022-04-20",
-        "description": "Lizards are cute, but did you know they can also be dangerous?"
+        "description": "Lizards are cute, but did you know they can also be dangerous?",
+        "paid": true
     },
     {
         "id": 8,
         "title": "10 Things You Didn't Know About Fish",
         "author": "John Doe",
         "date": "2022-04-22",
-        "description": "Fish are cute, but did you know they can also be dangerous?"
+        "description": "Fish are cute, but did you know they can also be dangerous?",
+        "paid": true
     },
     {
         "id": 9,
