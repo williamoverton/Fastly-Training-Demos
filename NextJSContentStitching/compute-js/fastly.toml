@@ -1,0 +1,21 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = []
+description = "NextJs Server"
+language = "javascript"
+manifest_version = 2
+name = "nextjs-content-stitching-demo"
+service_id = "5RDUoqjOOTShGzDiRuS1V3"
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.product_origin]
+      url = "https://sd-origin.global.ssl.fastly.net"
+
+[scripts]
+  build = "npx check-next-version && npx @fastly/compute-js-static-publish --build-static --suppress-framework-warnings && $(npm bin)/webpack && $(npm bin)/js-compute-runtime ./bin/index.js ./bin/main.wasm"
+
+# Domain: nextjs-pet-store.edgecompute.app
