@@ -49,16 +49,16 @@ import file29 from "../../.next/server/webpack-api-runtime.js?staticText";
 import * as fileModule29 from "../../.next/server/webpack-api-runtime.js";
 import file30 from "../../.next/server/webpack-runtime.js?staticText";
 import * as fileModule30 from "../../.next/server/webpack-runtime.js";
-import file31 from "../../.next/static/chunks/framework-ed075df0e0b45174.js?staticText";
-import file32 from "../../.next/static/chunks/main-e7a7892cb0edc024.js?staticText";
-import file33 from "../../.next/static/chunks/pages/_app-1a336683ff51f334.js?staticText";
-import file34 from "../../.next/static/chunks/pages/_error-e4f561a102d9bb14.js?staticText";
-import file35 from "../../.next/static/chunks/pages/index-abf3a4a826cde660.js?staticText";
-import file36 from "../../.next/static/chunks/polyfills-c67a75d1b6f99dc8.js?staticText";
-import file37 from "../../.next/static/chunks/webpack-8fa1640cc84ba8fe.js?staticText";
-import file38 from "../../.next/static/css/675ba93a165e81d2.css?staticText";
-import file39 from "../../.next/static/m6RcT2UPXytvsMzzOhwBB/_buildManifest.js?staticText";
-import file40 from "../../.next/static/m6RcT2UPXytvsMzzOhwBB/_ssgManifest.js?staticText";
+import file31 from "../../.next/static/YeP82zSHkkPS106JKGqTP/_buildManifest.js?staticText";
+import file32 from "../../.next/static/YeP82zSHkkPS106JKGqTP/_ssgManifest.js?staticText";
+import file33 from "../../.next/static/chunks/framework-ed075df0e0b45174.js?staticText";
+import file34 from "../../.next/static/chunks/main-e7a7892cb0edc024.js?staticText";
+import file35 from "../../.next/static/chunks/pages/_app-1a336683ff51f334.js?staticText";
+import file36 from "../../.next/static/chunks/pages/_error-e4f561a102d9bb14.js?staticText";
+import file37 from "../../.next/static/chunks/pages/index-cfa22056b2e0be2c.js?staticText";
+import file38 from "../../.next/static/chunks/polyfills-c67a75d1b6f99dc8.js?staticText";
+import file39 from "../../.next/static/chunks/webpack-8fa1640cc84ba8fe.js?staticText";
+import file40 from "../../.next/static/css/675ba93a165e81d2.css?staticText";
 import file41 from "../../.next/trace?staticBinary";
 import file42 from "../../README.md?staticBinary";
 import file43 from "../../components/banner.js?staticText";
@@ -111,16 +111,16 @@ export const assets = {
   "/.next/server/pages-manifest.json": { contentType: "application/json", content: file28, module: fileModule28, isStatic: false },
   "/.next/server/webpack-api-runtime.js": { contentType: "application/javascript", content: file29, module: fileModule29, isStatic: false },
   "/.next/server/webpack-runtime.js": { contentType: "application/javascript", content: file30, module: fileModule30, isStatic: false },
-  "/.next/static/chunks/framework-ed075df0e0b45174.js": { contentType: "application/javascript", content: file31, module: null, isStatic: false },
-  "/.next/static/chunks/main-e7a7892cb0edc024.js": { contentType: "application/javascript", content: file32, module: null, isStatic: false },
-  "/.next/static/chunks/pages/_app-1a336683ff51f334.js": { contentType: "application/javascript", content: file33, module: null, isStatic: false },
-  "/.next/static/chunks/pages/_error-e4f561a102d9bb14.js": { contentType: "application/javascript", content: file34, module: null, isStatic: false },
-  "/.next/static/chunks/pages/index-abf3a4a826cde660.js": { contentType: "application/javascript", content: file35, module: null, isStatic: false },
-  "/.next/static/chunks/polyfills-c67a75d1b6f99dc8.js": { contentType: "application/javascript", content: file36, module: null, isStatic: false },
-  "/.next/static/chunks/webpack-8fa1640cc84ba8fe.js": { contentType: "application/javascript", content: file37, module: null, isStatic: false },
-  "/.next/static/css/675ba93a165e81d2.css": { contentType: "text/css", content: file38, module: null, isStatic: false },
-  "/.next/static/m6RcT2UPXytvsMzzOhwBB/_buildManifest.js": { contentType: "application/javascript", content: file39, module: null, isStatic: false },
-  "/.next/static/m6RcT2UPXytvsMzzOhwBB/_ssgManifest.js": { contentType: "application/javascript", content: file40, module: null, isStatic: false },
+  "/.next/static/YeP82zSHkkPS106JKGqTP/_buildManifest.js": { contentType: "application/javascript", content: file31, module: null, isStatic: false },
+  "/.next/static/YeP82zSHkkPS106JKGqTP/_ssgManifest.js": { contentType: "application/javascript", content: file32, module: null, isStatic: false },
+  "/.next/static/chunks/framework-ed075df0e0b45174.js": { contentType: "application/javascript", content: file33, module: null, isStatic: false },
+  "/.next/static/chunks/main-e7a7892cb0edc024.js": { contentType: "application/javascript", content: file34, module: null, isStatic: false },
+  "/.next/static/chunks/pages/_app-1a336683ff51f334.js": { contentType: "application/javascript", content: file35, module: null, isStatic: false },
+  "/.next/static/chunks/pages/_error-e4f561a102d9bb14.js": { contentType: "application/javascript", content: file36, module: null, isStatic: false },
+  "/.next/static/chunks/pages/index-cfa22056b2e0be2c.js": { contentType: "application/javascript", content: file37, module: null, isStatic: false },
+  "/.next/static/chunks/polyfills-c67a75d1b6f99dc8.js": { contentType: "application/javascript", content: file38, module: null, isStatic: false },
+  "/.next/static/chunks/webpack-8fa1640cc84ba8fe.js": { contentType: "application/javascript", content: file39, module: null, isStatic: false },
+  "/.next/static/css/675ba93a165e81d2.css": { contentType: "text/css", content: file40, module: null, isStatic: false },
   "/.next/trace": { contentType: undefined, content: Buffer.from(file41, "base64"), module: null, isStatic: false },
   "/README.md": { contentType: undefined, content: Buffer.from(file42, "base64"), module: null, isStatic: false },
   "/components/banner.js": { contentType: "application/javascript", content: file43, module: null, isStatic: false },
