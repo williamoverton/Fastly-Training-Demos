@@ -35,7 +35,7 @@ export const generateHeader = (req, page) => {
         event.preventDefault();
         let element = targetElement = event.target || event.srcElement;
         element.innerHTML = "Clearing Cache...";
-        await fetch("http://35.189.102.211/purge?key=products", { method: "POST" });
+        await fetch("https://sd-origin.global.ssl.fastly.net/purge?key=products", { method: "POST" });
         
         // wait 1 second to allow cache to clear
         await new Promise(resolve => setTimeout(resolve, 1000));

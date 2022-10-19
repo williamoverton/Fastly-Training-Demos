@@ -25,7 +25,7 @@ const getProduct = async (id) => {
 
   const response = await fetch(url, {
     backend: "product_origin",
-    cacheOverride: new CacheOverride("override", { ttl: 120, surrogateKey: "product" }),
+    cacheOverride: new CacheOverride("override", { ttl: 120, surrogateKey: "products" }),
   });
 
   const product = await response.json();

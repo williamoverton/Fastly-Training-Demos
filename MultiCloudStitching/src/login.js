@@ -7,12 +7,13 @@ const formHTML = `
     <div class="col-md-6 offset-md-3">
 
       <h2>You must login to view the news</h2>
+      <p class="font-italic">Any email and password will work in this demo</p>
       <br/>
 
       <form method="POST">
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="email" name="email" class="form-control" />
+          <input type="email" id="email" name="email" class="form-control" value="user@example.com" />
           <label class="form-label" for="email">Email address</label>
         </div>
 
