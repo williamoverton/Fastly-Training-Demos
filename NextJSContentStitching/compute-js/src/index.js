@@ -21,5 +21,11 @@ const server = await createServer({
 
 addEventListener("fetch", (event) => event.respondWith(handleRequest(event)));
 async function handleRequest(event) {
-  return await server.handleFetchEvent(event);
+  try {
+    return await server.handleFetchEvent(event);
+  } catch (error) {
+    console.error(JSON.stringify(error))
+    console.error(typeof error);
+    return new Response("An Error Occurred", {status:500});
+  }
 }
