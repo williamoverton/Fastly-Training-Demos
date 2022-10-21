@@ -21,8 +21,15 @@ const server = await createServer({
 
 addEventListener("fetch", (event) => event.respondWith(handleRequest(event)));
 async function handleRequest(event) {
+  let startTime = new Date().getTime();
   try {
-    return await server.handleFetchEvent(event);
+    const response = await server.handleFetchEvent(event);
+
+    let endTime = new Date().getTime();
+    let timeDiff = endTime - startTime;
+    console.log(`handleRequest took ${timeDiff}ms`);
+
+    return response
   } catch (error) {
     console.error(JSON.stringify(error))
     console.error(typeof error);

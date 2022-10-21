@@ -2,6 +2,9 @@
  * Get product from API
  */
 export const getProducts = async () => {
+
+  let startTime = new Date().getTime();
+
   const url = `https://sd-origin.global.ssl.fastly.net/product/range?from=0&to=4`;
 
   const response = await fetch(url, {
@@ -10,6 +13,10 @@ export const getProducts = async () => {
   });
 
   const products = await response.json();
+
+  let endTime = new Date().getTime();
+  let timeDiff = endTime - startTime;
+  console.log(`getProducts took ${timeDiff}ms`);
 
   return products;
 }
