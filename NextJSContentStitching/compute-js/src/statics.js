@@ -53,12 +53,12 @@ import file31 from "../../.next/static/chunks/framework-ed075df0e0b45174.js?stat
 import file32 from "../../.next/static/chunks/main-e7a7892cb0edc024.js?staticText";
 import file33 from "../../.next/static/chunks/pages/_app-1a336683ff51f334.js?staticText";
 import file34 from "../../.next/static/chunks/pages/_error-e4f561a102d9bb14.js?staticText";
-import file35 from "../../.next/static/chunks/pages/index-4458e797be166521.js?staticText";
+import file35 from "../../.next/static/chunks/pages/index-1d047b42ded6b3da.js?staticText";
 import file36 from "../../.next/static/chunks/polyfills-c67a75d1b6f99dc8.js?staticText";
 import file37 from "../../.next/static/chunks/webpack-8fa1640cc84ba8fe.js?staticText";
 import file38 from "../../.next/static/css/3231ebd47856b7e4.css?staticText";
-import file39 from "../../.next/static/hENrfbjiGJfnvLwAzc9yq/_buildManifest.js?staticText";
-import file40 from "../../.next/static/hENrfbjiGJfnvLwAzc9yq/_ssgManifest.js?staticText";
+import file39 from "../../.next/static/vaJHw4Olvxf7n5ovZTXaY/_buildManifest.js?staticText";
+import file40 from "../../.next/static/vaJHw4Olvxf7n5ovZTXaY/_ssgManifest.js?staticText";
 import file41 from "../../.next/trace?staticBinary";
 import file42 from "../../README.md?staticBinary";
 import file43 from "../../components/banner.js?staticText";
@@ -67,17 +67,18 @@ import file45 from "../../components/navbar.js?staticText";
 import file46 from "../../components/products.js?staticText";
 import file47 from "../../lib/abTesting.js?staticText";
 import file48 from "../../lib/banner.js?staticText";
-import file49 from "../../lib/products.js?staticText";
-import file50 from "../../next.config.js?staticText";
-import * as fileModule50 from "../../next.config.js";
-import file51 from "../../package-lock.json?staticText";
-import file52 from "../../package.json?staticText";
-import file53 from "../../postcss.config.js?staticText";
-import file54 from "../../public/favicon.ico?staticBinary";
-import file55 from "../../public/vercel.svg?staticText";
-import file56 from "../../styles/globals.css?staticText";
-import file57 from "../../tailwind.config.js?staticText";
-import file58 from "../../yarn.lock?staticBinary";
+import file49 from "../../lib/devFastlyStub.js?staticText";
+import file50 from "../../lib/products.js?staticText";
+import file51 from "../../next.config.js?staticText";
+import * as fileModule51 from "../../next.config.js";
+import file52 from "../../package-lock.json?staticText";
+import file53 from "../../package.json?staticText";
+import file54 from "../../postcss.config.js?staticText";
+import file55 from "../../public/favicon.ico?staticBinary";
+import file56 from "../../public/vercel.svg?staticText";
+import file57 from "../../styles/globals.css?staticText";
+import file58 from "../../tailwind.config.js?staticText";
+import file59 from "../../yarn.lock?staticBinary";
 
 export const assets = {
   "/.next/BUILD_ID": { contentType: undefined, content: Buffer.from(file0, "base64"), module: null, isStatic: false },
@@ -115,12 +116,12 @@ export const assets = {
   "/.next/static/chunks/main-e7a7892cb0edc024.js": { contentType: "application/javascript", content: file32, module: null, isStatic: false },
   "/.next/static/chunks/pages/_app-1a336683ff51f334.js": { contentType: "application/javascript", content: file33, module: null, isStatic: false },
   "/.next/static/chunks/pages/_error-e4f561a102d9bb14.js": { contentType: "application/javascript", content: file34, module: null, isStatic: false },
-  "/.next/static/chunks/pages/index-4458e797be166521.js": { contentType: "application/javascript", content: file35, module: null, isStatic: false },
+  "/.next/static/chunks/pages/index-1d047b42ded6b3da.js": { contentType: "application/javascript", content: file35, module: null, isStatic: false },
   "/.next/static/chunks/polyfills-c67a75d1b6f99dc8.js": { contentType: "application/javascript", content: file36, module: null, isStatic: false },
   "/.next/static/chunks/webpack-8fa1640cc84ba8fe.js": { contentType: "application/javascript", content: file37, module: null, isStatic: false },
   "/.next/static/css/3231ebd47856b7e4.css": { contentType: "text/css", content: file38, module: null, isStatic: false },
-  "/.next/static/hENrfbjiGJfnvLwAzc9yq/_buildManifest.js": { contentType: "application/javascript", content: file39, module: null, isStatic: false },
-  "/.next/static/hENrfbjiGJfnvLwAzc9yq/_ssgManifest.js": { contentType: "application/javascript", content: file40, module: null, isStatic: false },
+  "/.next/static/vaJHw4Olvxf7n5ovZTXaY/_buildManifest.js": { contentType: "application/javascript", content: file39, module: null, isStatic: false },
+  "/.next/static/vaJHw4Olvxf7n5ovZTXaY/_ssgManifest.js": { contentType: "application/javascript", content: file40, module: null, isStatic: false },
   "/.next/trace": { contentType: undefined, content: Buffer.from(file41, "base64"), module: null, isStatic: false },
   "/README.md": { contentType: undefined, content: Buffer.from(file42, "base64"), module: null, isStatic: false },
   "/components/banner.js": { contentType: "application/javascript", content: file43, module: null, isStatic: false },
@@ -129,16 +130,17 @@ export const assets = {
   "/components/products.js": { contentType: "application/javascript", content: file46, module: null, isStatic: false },
   "/lib/abTesting.js": { contentType: "application/javascript", content: file47, module: null, isStatic: false },
   "/lib/banner.js": { contentType: "application/javascript", content: file48, module: null, isStatic: false },
-  "/lib/products.js": { contentType: "application/javascript", content: file49, module: null, isStatic: false },
-  "/next.config.js": { contentType: "application/javascript", content: file50, module: fileModule50, isStatic: false },
-  "/package-lock.json": { contentType: "application/json", content: file51, module: null, isStatic: false },
-  "/package.json": { contentType: "application/json", content: file52, module: null, isStatic: false },
-  "/postcss.config.js": { contentType: "application/javascript", content: file53, module: null, isStatic: false },
-  "/public/favicon.ico": { contentType: "image/vnd.microsoft.icon", content: Buffer.from(file54, "base64"), module: null, isStatic: false },
-  "/public/vercel.svg": { contentType: "image/svg+xml", content: file55, module: null, isStatic: false },
-  "/styles/globals.css": { contentType: "text/css", content: file56, module: null, isStatic: false },
-  "/tailwind.config.js": { contentType: "application/javascript", content: file57, module: null, isStatic: false },
-  "/yarn.lock": { contentType: undefined, content: Buffer.from(file58, "base64"), module: null, isStatic: false },
+  "/lib/devFastlyStub.js": { contentType: "application/javascript", content: file49, module: null, isStatic: false },
+  "/lib/products.js": { contentType: "application/javascript", content: file50, module: null, isStatic: false },
+  "/next.config.js": { contentType: "application/javascript", content: file51, module: fileModule51, isStatic: false },
+  "/package-lock.json": { contentType: "application/json", content: file52, module: null, isStatic: false },
+  "/package.json": { contentType: "application/json", content: file53, module: null, isStatic: false },
+  "/postcss.config.js": { contentType: "application/javascript", content: file54, module: null, isStatic: false },
+  "/public/favicon.ico": { contentType: "image/vnd.microsoft.icon", content: Buffer.from(file55, "base64"), module: null, isStatic: false },
+  "/public/vercel.svg": { contentType: "image/svg+xml", content: file56, module: null, isStatic: false },
+  "/styles/globals.css": { contentType: "text/css", content: file57, module: null, isStatic: false },
+  "/tailwind.config.js": { contentType: "application/javascript", content: file58, module: null, isStatic: false },
+  "/yarn.lock": { contentType: undefined, content: Buffer.from(file59, "base64"), module: null, isStatic: false },
 };
 
 export const spaFile = false;
