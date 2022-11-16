@@ -4,15 +4,15 @@
         "title": "10 Things You Didn't Know About Puppies",
         "author": "John Doe",
         "date": "2022-04-08",
-        "description": "Puppies are cute, but did you know they can also be dangerous?"
+        "description": "Puppies are cute, but did you know they can also be dangerous?",
+        "paid": true
     },
     {
         "id": 2,
         "title": "10 Things You Didn't Know About Kittens",
         "author": "John Doe",
         "date": "2022-04-10",
-        "description": "Kittens are cute, but did you know they can also be dangerous?",
-        "paid": true
+        "description": "Kittens are cute, but did you know they can also be dangerous?"
     },
     {
         "id": 3,

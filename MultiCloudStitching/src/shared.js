@@ -3,7 +3,7 @@ export const getHTMLTemplate = async () => {
 
   const response = await fetch(url, {
     backend: "aws_origin",
-    cacheOverride: new CacheOverride("override", { ttl: 120, surrogateKey: "assets" })
+    cacheOverride: new CacheOverride("override", { ttl: 120, surrogateKey: "demo" })
   });
 
   const template = await response.text();
@@ -35,7 +35,7 @@ export const generateHeader = (req, page) => {
         event.preventDefault();
         let element = targetElement = event.target || event.srcElement;
         element.innerHTML = "Clearing Cache...";
-        await fetch("https://sd-origin.global.ssl.fastly.net/purge?key=products", { method: "POST" });
+        await fetch("https://sd-origin.global.ssl.fastly.net/purge?key=demo", { method: "POST" });
         
         // wait 1 second to allow cache to clear
         await new Promise(resolve => setTimeout(resolve, 1000));
@@ -56,7 +56,7 @@ export const generateSidebar = (timings) => {
   return `
   <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; position: fixed; top: 0px; left: 0px; bottom: 100%; min-height: 100%">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <span class="fs-4">Debug Info</span>
+      <span class="fs-4">Debug Information</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
