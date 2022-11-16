@@ -7,6 +7,7 @@ import { createNewsPage } from "./news.js";
 import { createLoginPage } from "./login.js";
 
 const getJwtSecret = () => {
+  // TODO: Get the JWT secret from a secret store
   return "supersecret";
 }
 
@@ -101,6 +102,11 @@ router.post("/login", async (req, res) => {
 router.get("/logout", async (req, res) => {
   res.clearCookie("jwt");
   return res.redirect("/");
+});
+
+router.use(async (req, res) => {
+  res.status = 404;
+  res.send("404 - Not Found");
 });
 
 router.listen();

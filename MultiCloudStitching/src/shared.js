@@ -46,17 +46,40 @@ export const generateHeader = (req, page) => {
   `;
 }
 
-export const generateFooter = (startTime) => {
+export const generateSidebar = (timings) => {
   const time = (new Date()).getTime();
 
+  const timingItems = timings.items.map((item) => {
+    return `<li class="nav-item mb-2">${item.description}: <b>${item.time}ms</b></li>`;
+  });
+
   return `
-  <div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Page generated in ${time - startTime.getTime()}ms</a></li>
-      </ul>
-      <p class="text-center text-muted">© 2022 Company, Inc</p>
-    </footer>
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; position: fixed; top: 0px; left: 0px; bottom: 100%; min-height: 100%">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4">Debug Info</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        Page generated in: <b>${time - timings.startTime.getTime()}ms</b>
+      </li>
+      <hr/>
+      ${timingItems.join("")}
+    </ul>
   </div>
+
   `
+}
+
+export const time = async (description, promise) => {
+  const startTime = new Date();
+  const result = await promise;
+  const endTime = new Date();
+  return {
+    result,
+    time: {
+      description,
+      time: endTime.getTime() - startTime.getTime()
+    }
+  };
 }

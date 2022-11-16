@@ -1,5 +1,5 @@
 import Mustache from "mustache";
-import { getHTMLTemplate, generateFooter, generateHeader } from "./shared";
+import { getHTMLTemplate, generateSidebar, generateHeader, time } from "./shared";
 
 const formHTML = `
 <div class="container text-center">
@@ -52,14 +52,19 @@ export const createLoginPage = async (req) => {
   let startTime = new Date();
 
   const [template] = await Promise.all([
-    getHTMLTemplate(),
+    time("Getting html template from AWS S3 Bucket", getHTMLTemplate()),
   ]);
 
-  let html = Mustache.render(template, {
+  let html = Mustache.render(template.result, {
     title: "Fastly Compute@Edge",
     header: generateHeader(req, "login"),
     content: formHTML,
-    footer: generateFooter(startTime),
+    footer: generateSidebar({
+      startTime,
+      items: [
+        template.time
+      ]
+    }),
   });
 
   return html;

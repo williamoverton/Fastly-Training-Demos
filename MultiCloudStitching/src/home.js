@@ -1,27 +1,33 @@
 import Mustache from "mustache";
-import { getHTMLTemplate, generateFooter, generateHeader } from "./shared";
+import { getHTMLTemplate, generateSidebar, generateHeader, time } from "./shared";
 
 export const createHomePage = async (req) => {
 
   let startTime = new Date();
 
   const [products, template] = await Promise.all([
-    getProducts([1, 2, 3, 4, 5, 6]),
-    getHTMLTemplate(),
+    time("Getting Products From GCP based API", getProducts([1, 2, 3, 4, 5, 6])),
+    time("Getting html template from AWS S3 Bucket", getHTMLTemplate()),
   ]);
 
-  let html = Mustache.render(template, {
+  let html = Mustache.render(template.result, {
     title: "Fastly Compute@Edge",
     header: generateHeader(req, "home"),
-    content: formatProducts(products),
-    footer: generateFooter(startTime),
+    content: formatProducts(products.result),
+    footer: generateSidebar({
+      startTime,
+      items: [
+        products.time,
+        template.time,
+      ]
+    }),
   });
 
   return html;
 };
 
 const getProduct = async (id) => {
-  const url = `http://35.189.102.211/product?id=${id}`;
+  const url = `https://sd-origin.global.ssl.fastly.net/product?id=${id}`;
 
   const response = await fetch(url, {
     backend: "product_origin",
