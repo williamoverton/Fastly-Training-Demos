@@ -13,6 +13,9 @@ const getJwtSecret = () => {
 
 const router = new Router();
 
+/**
+ * Do JWT verification
+ */
 router.use(async (req, res) => {
   // Check cookies for a user session
   const jwt = req.cookies.get("jwt");

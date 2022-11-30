@@ -1,24 +1,37 @@
 import Mustache from "mustache";
 import { getHTMLTemplate, generateSidebar, generateHeader, time } from "./shared";
 
-import newsData from "./news_data.json";
+const getNews = async () => {
+  const url = `https://sd-origin.global.ssl.fastly.net/product/news`;
+
+  const response = await fetch(url, {
+    backend: "product_origin",
+    cacheOverride: new CacheOverride("override", { ttl: 120, surrogateKey: "demo" }),
+  });
+
+  const product = await response.json();
+
+  return product;
+}
 
 export const createNewsPage = async (req) => {
 
   let startTime = new Date();
 
-  const [template] = await Promise.all([
+  const [template, news] = await Promise.all([
     time("Getting html template from AWS S3 Bucket", getHTMLTemplate()),
+    time("Getting News From GCP based API", getNews()),
   ]);
 
   let html = Mustache.render(template.result, {
     title: "Fastly Compute@Edge",
     header: generateHeader(req, "news"),
-    content: generateNewsPage(req, newsData),
+    content: generateNewsPage(req, news.result),
     footer: generateSidebar({
       startTime,
       items: [
-        template.time
+        template.time,
+        news.time
       ]
     }),
   });
